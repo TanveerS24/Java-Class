@@ -1,0 +1,24 @@
+//House
+class House {
+    public static void main(String[] args) {
+        int i,j,k,m,n;
+        for(i=1;i<=10;++i){//change test expression to 10
+            if(i<=5){//triangle for 5 rows
+              for(j=5;j>=i;--j){
+                System.out.print(" ");
+              }
+            for(k=1;k<=2*i-1;++k){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        else{//square for 5 rows
+            System.out.print(" ");
+            for(n=1;n<=9;++n){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+    }
+}
