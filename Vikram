@@ -1,0 +1,110 @@
+class Main{
+    public static void main(String[] args){
+        for(int i=1;i<=10;i++){
+            for(int j=1;j<=20;j++){
+                if(i==j || i+j==20){
+                    System.out.print("*");
+                }
+                else{
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+        System.out.println("\n\n\n\n");
+        for(int i=1;i<=11;i++){
+            if(i==1 || i==11){
+                for(int j=1;j<=20;j++){
+                    System.out.print("*");
+                }
+            }
+            else{
+                for(int j=1;j<=9;j++){
+                    System.out.print(" ");
+                }
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        System.out.println("\n\n\n\n");
+        for(int i=1;i<=11;i++){
+            System.out.print("*");
+            if(i<=6){
+                for(int j=6;j>=i;j--){
+                    System.out.print(" ");
+                }
+            }
+            else{
+                for(int j=1;j<=i-5;j++){
+                    System.out.print(" ");
+                }
+            }
+            System.out.println("*");
+        }
+        System.out.println("\n\n\n\n");
+        for(int i=1;i<=11;i++){
+            if(i==1 || i==6){
+                for(int j=1;j<=11;j++){
+                    System.out.print("*");
+                }
+            }
+            else if(i<=6){
+                for(int j=1;j<=11;j++){
+                    if(j==1 || j==11){
+                        System.out.print("*");
+                    }
+                    else{
+                        System.out.print(" ");
+                    }
+                }
+            }
+            else{
+                System.out.print("*");
+                for(int j=1;j<=(i-7)+(i-6);j++){
+                    System.out.print(" ");
+                }
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        System.out.println("\n\n\n\n");
+        for(int i=1;i<=10;i++){
+            for(int k=9;k>=i;k--){
+                System.out.print(" ");
+            }
+            if(i==6){
+                for(int j=1;j<=i*2;j++){
+                    System.out.print("*");
+                }
+                System.out.println();
+            }
+            else{
+                System.out.print("*");
+                for(int j=1;j<=i*2-2;j++){
+                    System.out.print(" ");
+                }
+                System.out.println("*");
+            }
+        }
+        System.out.println("\n\n\n\n");
+        for(int i=1;i<=11;i++){
+            System.out.print("*");
+            if(i>=2 && i<=6){
+                for(int j=1;j<=10;j++){
+                    if(i-j==1 || i+j==12){
+                        System.out.print("*");
+                    }
+                    else{
+                        System.out.print(" ");
+                    }
+                }
+            }
+            else{
+                for(int j=1;j<=10;j++){
+                    System.out.print(" ");
+                }
+            }
+            System.out.println("*");
+        }
+    }
+}
