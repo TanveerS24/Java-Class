@@ -1,0 +1,31 @@
+import java.util.Scanner;
+class PrevProduct{
+    public static int[] product(int arr[],int len){
+        int res[]=new int[len];
+        res[0]=1;
+        for(int i=1;i<len;i++){
+            res[i]=res[i-1]*arr[i-1];
+        }
+        int mul=1;
+        for(int i=len-1;i>=0;i--){
+            res[i]=res[i]*mul;
+            mul=mul*arr[i];
+        }
+        return res;
+    }
+    public static void main(String[] args){
+        Scanner sn=new Scanner(System.in);
+        System.out.print("Enter no. of elements in the array:");
+        int size=sn.nextInt();
+        System.out.print("Enter elements of your array:");
+        int[] arr=new int[size];
+        for(int i=0;i<size;i++){
+            arr[i]=sn.nextInt();
+        }
+        System.out.println("Product of the array excluding the current element:");
+        int[] arr2=product(arr,size);
+        for(int i=0;i<size;i++){
+            System.out.print(arr2[i]+" ");
+        }
+    }
+}
