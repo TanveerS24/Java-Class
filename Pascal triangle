@@ -1,0 +1,16 @@
+class pascal{
+    public static void main(String[] args){
+        int size=5;
+        int i,j;
+        int stop=size*2-1;
+        for(i=1;i<=size;i++){
+            for(j=0;j<=(stop/2+i);j++){
+                if(j>(stop/2-i+1))
+                    System.out.print(i+" ");
+                else
+                    System.out.print("  ");
+            }
+            System.out.println();
+        }
+    }
+}
