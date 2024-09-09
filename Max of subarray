@@ -1,0 +1,17 @@
+class MaxArrayUsingK{
+    public static void main(String[] args){
+        int[] arr1={10,5,2,7,8,7};
+        int size=arr1.length;
+        int k=3;
+        int[] arr2=new int[size-k+1];
+        for(int i=0;i<size-k+1;i++){
+                int max=arr1[i];
+                for(int j=i;j<k+i;j++){
+                    if(arr1[j]>max)
+                        max=arr1[j];
+                }
+                arr2[i]=max;
+                System.out.print(arr2[i]+" ");
+        }
+    }
+}
