@@ -1,0 +1,21 @@
+public class Palindromic_Sequence {
+	public static void main(String[] args) {
+		int arr[]= {5,5,5,5,5};
+	  	int size=arr.length,change=0;
+	    int i;
+	    int size1=(size%2==0)?(size/2)-1:size/2;
+	    for(i=size1;i>0;i--) {
+    	    if(arr[i]!=(arr[i-1]+1)){
+    	        arr[i-1] = arr[i]-1;     			
+    	        change++;
+    	    }    
+    	    if(arr[i]!=arr[size-i-1]) {
+    	        arr[size-i-1]=arr[i];
+    	        change++;
+    	    }
+	    }
+	    if(arr[0]!=arr[size-1])
+	        change++;
+	    System.out.println("Answer:"+(change));
+	}
+}
