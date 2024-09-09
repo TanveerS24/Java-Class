@@ -1,0 +1,17 @@
+class ShortestGreatest{
+    public static void main(String[] args){
+        int arr[]={10,5,20,15,12,30,21};
+        int max_index=0;
+        for(int i=0;i<arr.length;i++){
+            int max=arr[i];
+            for(int j=i-1;j>=max_index;j--){
+                if(arr[j]>max){
+                    max=arr[j];
+                    max_index=j;
+                    break;
+                }
+            }
+            System.out.print(max+" ");
+        }
+    }
+}
