@@ -1,0 +1,19 @@
+class GroupReverse {
+    public static void reverse(int arr[]){
+        for(int i=arr.length-1;i>=0;i--){
+            System.out.print(arr[i]+" ");
+        }
+    }
+    public static void main(String[] args) {
+        int arr[]={10,1,15,3,66,55,20,8};
+        int size=arr.length;
+        int k=3,i;
+        for(i=0;i<size;i+=k){
+            if(i+k>=size)
+                k=size-i;
+            int temp[]=new int[k];
+            System.arraycopy(arr,i,temp,0,k);
+            reverse(temp);
+        }
+    }
+}
